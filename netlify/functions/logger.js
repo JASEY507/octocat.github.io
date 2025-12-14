@@ -2,19 +2,18 @@ exports.handler = async (event) => {
   const ip =
     event.headers["x-forwarded-for"] ||
     event.headers["client-ip"] ||
-    "IP yok";
+    "unknown";
 
-  let body = {};
-  try {
-    body = JSON.parse(event.body);
-  } catch {}
+  const ua = event.headers["user-agent"];
+  const body = JSON.parse(event.body || "{}");
 
-  console.log("====== YENİ ZİYARET ======");
   console.log("IP:", ip);
-  console.log("GELEN DATA:", body);
+  console.log("UA:", ua);
+  console.log("DATA:", body);
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ status: "ok" }),
+    body: JSON.stringify({ ok: true })
   };
 };
+
