@@ -1,248 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
 }
+
 body{
-    height: 100vh;
-    background-color: #FAFAFA;
-    overflow-y: hidden;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    margin: 60px 0px;
+	background: #fafafa;
+	font-size: 14px;
 }
 
-.instagramAll{
-    margin-left: 30px;
+.wrapper .header{
+	max-width: 350px;
+	width: 100%;
+	height: auto;
+	margin: 50px auto;
 }
 
-.imagesAndTransistion{
-    position: relative;
+.wrapper .header .top,
+.wrapper .signup{
+	background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 40px 40px 20px;
 }
 
-.imagesAndTransistion > #frame1 > img{
-    height:570px;
-    width:290px;
-}
-.imagesAndTransistion > #frame2 > img:nth-child(1){
-    height:540px;
-    position:absolute;
-    top:-12px;
-    left:-90px;
-    z-index: -1;
+.wrapper .header .logo img{
+	display: block;
+	margin: 0 auto 35px;
 }
 
-.imagesAndTransistion > #frame2 > img:nth-child(2){
-    height:530px;
-    position:absolute;
-    top:0;
-    left:-70px;
-    z-index: -2;
+.wrapper .header .form .input_field{
+	margin-bottom: 5px;
 }
 
-.transistionImages >img{
-    position:absolute;
-    top:10px;
-    left:16px;
-    transition: 1.5s ease-in;
-}  
-
-.instagramForm{
-    margin-top: 15px;
-    background-color: white;
-    border: 1px solid gainsboro;
-    height: fit-content;
-    padding: 10px 50px 20px;
-    width:380px;
-}
-.insta-font{
-    display: flex;
-    justify-content: center;
-}
-.insta-font> img{
-    width:200px;
-    height:100px;
-    margin-bottom: 20px;
+.wrapper .header .form .input_field .input{
+	width: 100%;
+	background: #fafafa;
+	border: 1px solid #efefef;
+	font-size: 12px;
+	border-radius: 3px;
+	color: #262626;
+	padding: 10px;
 }
 
-.inputs{
-    display:flex;
-    flex-direction: column;
+.wrapper .header .form .input_field .input:focus{
+	border: 1px solid #b2b2b2;
 }
 
-.email > input[type="text"]:focus,
-.password > input[type ="password"]:focus{
-    outline: 0;
-    border:1px solid rgb(189, 199, 159);
-}
-
-.email > input[type="text"], 
-.password > input[type="password"],
-.password > input[type="text"]{
-    height: 35px;
-    width:100%;
-    margin-bottom: 10px;
-    border:1px solid rgb(228, 228, 228);
-    border-radius: 3px;
-    padding:10px 0px 10px 10px;
-    font-size: 13px;
-    color:#262626;
-    background-color: transparent;
-    
-}
-
-.password > input[type="password"],
-.password > input[type="text"]{
-    padding-right: 70px;
-}
-
-
-#login{
-    height:35px;
-    border-radius: 10px;
-    color:white;
-    background-color: #4DB5F9;
-    font-weight: bold;
-    border: 0;
-    margin-bottom: 20px;
-
-    transition: 0.2s ease-in;
-}
-.or{
-    position: relative;
-}
-
-#or{
-    align-items: center;
+.wrapper .header .form .btn{
+	margin: 10px 0;
+	background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 4px;
     text-align: center;
-    align-content: center;
-    padding: 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100%;
-    position: absolute;
-    top:-17px;
-    left:115px;
-    font-size: 13px;
-    font-weight: bold;
-  
-}
-.loginWithFacebook{
-    margin: 20px auto;
-}
-.loginWithFacebook  i{
-    font-size: 20px;
-    margin-right: 5px;
-}
-.loginWithFacebook > a{
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    margin:auto;
-    color:#385185;
-
-
-}
-#forget{
-    margin:0px auto ;
-    font-size: 14px;
-}
-#forget a{
-    text-decoration: none;
-    color:#385989;
+    padding: 5px;
 }
 
-.no-account{
-    border: 1px solid gainsboro;
-    background-color: white;
-   width:380px;
-    text-align: center;
-    padding:15px;
-    margin:10px 0;
-    font-size: 16px;
-
-}
-.no-account  a{
-    text-decoration: none;
-    color:#0095F6;
-    font-weight: 500;
+.wrapper .header .form .btn a{
+	color: #fff;
+	display: block;
 }
 
-#getTheApp{
-    text-align: center;
-    font-size: 14px;
-    margin:15px 0;
+.wrapper .header .or{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 15px;
+	margin: 15px 0 20px;
 }
 
-.downloadLinks{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 30px;
-}
-.downloadLinks img{
-    width:25px;
-    height:25px;
-    margin: 10px 5px 0 10px;
-  
+.wrapper .header .or .line{
+	width: 105px;
+	height: 2px;
+	background: #efefef
 }
 
-.googlePlay, .microsoft{
-    display: flex;
-}
-.btn{
-    width:140px;
-    background-color: black;
-    color:white;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btn:active{
-    opacity: 0.7;
-}
-.btn span{
-    font-size: 10px;
-}
-.email, .password{
-    position:relative
+.wrapper .header .or p{
+	color: #999;
+	font-size: 12px;
 }
 
-#emailPlaceholder, #passwordPlaceholder{
-    position:absolute;
-    top:8px;
-    left:5px;
-    padding-left: 6px;
-    font-size: 12px;
-    opacity:0.7;
-    pointer-events: none;
-    transition: 0.1s ease;
- 
+.wrapper .dif .fb{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#showOrHide {
-    position:absolute;
-    right:10px;
-    top:5px;
-    cursor: pointer;
-    font-weight: 500;
-    padding-left: 10px;
-
-}
-#showOrHide:hover{
-    opacity: 0.7;
+.wrapper .dif .fb img{
+	width: 16px;
+	height: 16px;
 }
 
-.fadingImages{
-    width:260px;
-    overflow: hidden;
-    height:550px;
-    z-index: -1;
+.wrapper .dif  .fb p{
+	color: #385185;
+	font-weight: 500;
+	margin-left: 10px;
 }
 
-@media (max-width:950px){
-    .imagesAndTransistion{
-        display: none;
-    }
+.wrapper .dif .forgot{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.wrapper .dif .forgot a{
+	color: #003569;
+}
+
+.wrapper .signup{
+	margin: 10px 0 20px;
+	padding: 25px 40px;
+	text-align: center;
+	color: #262626;
+}
+
+.wrapper .signup a{
+	color: #3897f0;
+}
+
+.wrapper .apps{
+	text-align: center;
+	color: #262626;
+}
+
+.wrapper .apps p{
+	margin-bottom: 20px;
+}
+
+.wrapper .apps a img{
+	width: 135px;
+	height: 40px;
+	margin: 0 5px;
+}
+
+.footer{
+	max-width: 935px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer .links ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer .links ul li a{
+	color: #003569;
+	font-size: 12px;
+}
+
+.footer .copyright{
+	color: #999;	
 }
